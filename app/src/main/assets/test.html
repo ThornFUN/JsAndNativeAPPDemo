@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Js调用Android</title>
+
+        </head>
+    <body>
+        <div>
+            <dl>
+                <dd><a href="http://www.qq.com">被拦截的URL</a></dd>
+                <dd><a href="http://www.baidu.com">正常的URL</a></dd>
+                <dd><a href="http://www.qq.test" >想在 shouldOverrideUrlLoading 中调用intent跳转，但失败了</a></dd>
+                <dd><input type="button" value="调用方法NativeAPP中的方法跳转" onclick="androidTag.toAnotherAcitity()"/></dd>
+                <dd><input type="button" value="Toast 提示" onclick="androidTag.showToast('调用了 showToast 方法');"/></dd>
+                <dd><input type="button" value="列表对话框" onclick="androidTag.showDialog();"/></dd>
+                <dd> <input type="button" value="Alert" onclick="alertSomeThing()"/></dd>
+
+                <dd><div id="content"><h2>这是初始内容</h2></div> </dd>
+            </dl>
+        </div>
+    </body>
+    <script>
+        function alertSomeThing(){
+            // 弹出一个框
+            alert("alert something to show ");
+        }
+
+        function doSomething(){
+            //改变 id 为 content 中的值
+                 document.getElementById("content").innerHTML =("测试1111111111111");
+        }
+    </script>
+
+</html>
